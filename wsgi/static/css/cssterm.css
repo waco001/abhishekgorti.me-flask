@@ -232,6 +232,24 @@ line-height: 1.5em;
   white-space: nowrap;
   overflow: hidden;
 }
+.menu a{
+  margin-right: 10px;
+  text-decoration: none;
+  font-weight: normal;
+}
+.menu a:link, a:visited {
+    color: white;
+}
+.menu a:hover {
+    color: white;
+    font-weight: bold;
+}
+.menu {
+  display:none;
+}
+.home{
+
+}
 .folder{
     float: left;
     margin-right:5px;
@@ -314,41 +332,48 @@ line-height: 1.5em;
     background:#2C001E;
     padding:10px;
     line-height:1.5em;
+    overflow-y: scroll;
+    height: 80%;
 }
 #body span { 
    color: #FFFFFF!important; 
 }
 
-@keyframes blink
-{
-  0%   {  background:rgba(99,222,0,100);  }
-  100% {  background:rgba(99,222,0,0);  }
+@keyframes blink{
+  0%   {  background:white; opacity: 1; }
+  50% {  opacity: 0;  }
+  100% {  background:white; opacity: 1;  }
+
 }
 
 @-webkit-keyframes blink {
-  0%   {  background:rgba(99,222,0,100);  }
-  100% {  background:rgba(99,222,0,0);  }
+  0%   {  background:white; opacity: 1; }
+  50% {  opacity: 0;  }
+  100% {  background:white; opacity: 1;  }
+
 }
 @-moz-keyframes blink {
-  0%   {  background:rgba(99,222,0,100);  }
-  100% {  background:rgba(99,222,0,0);  }
+  0%   {  background:white; opacity: 1; }
+  50% {  opacity: 0;  }
+  100% {  background:white; opacity: 1;  }
+
 }
 .cursor {
   background: white; 
   display:inline-block;
-  width:11px;
+  width:8px;
   height:19px;
   margin-bottom:-3px;
 }
-#body:hover .cursor {
+.cursor {
     -webkit-animation-name: blink;
-    -webkit-animation-duration: 1.5s;
+    -webkit-animation-duration: 1s;
     -webkit-animation-iteration-count: infinite;
     -moz-animation-name: blink;
-    -moz-animation-duration: 1.5s;
+    -moz-animation-duration: 1s;
     -moz-animation-iteration-count: infinite;
 }
-  
+
 #body p::-webkit-selection  {
     background:#0b209e;
 }
