@@ -1,4 +1,4 @@
-body { background:#2C001E;
+body { background:#56334B;
 color: #444;
 font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
 line-height: 1.5em;
@@ -7,7 +7,8 @@ line-height: 1.5em;
 /* FINDER WINDOW */
 
 #window{
-    width: 90%;
+    width: auto;
+    max-width: 90%;
     margin-top:40px;
   margin-left: auto;
   margin-right: auto;
