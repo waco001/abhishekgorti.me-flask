@@ -1,79 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <title>Geo for Bootstrap, a Timeless Theme by Divshot</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="My own website dude!.">
-    <meta name="author" content="Abhishek Gorti">
-
-    <!--[if lt IE 9]>
-      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
-    <link rel="stylesheet" href="{{url_for('static',filename='css/style.css')}}">
-
-
-  </head>
+    <head>
+        <link rel="stylesheet" href="{{url_for('static',filename='css/cssterm.css')}}">
+        <script src="http://code.jquery.com/jquery-latest.js"></script>
+        <script src="{{url_for('static',filename='js/typed.js')}}"></script>
+        <script>
+    $(function(){
+        $(".element").typed({
+            strings: ["First ^1000 sentence.", "Second<br>sentence.", "<u>Hello There</u>"],
+            typeSpeed: 5
+        });
+    });
+</script>
+    </head>
 <body>
-<div class="container-fluid">
-	<div class="row-fluid">
-		<div class="span12">
-			<div class="hero-unit">
-				<h1>
-					Hello, world!
-				</h1>
-				<p>
-					This is a template for a simple marketing or informational website. It includes a large callout called the hero unit and three supporting pieces of content. Use it as a starting point to create something more unique.
-				</p>
-				<p>
-					<a class="btn btn-primary btn-large" href="#">Learn more »</a>
-				</p>
-			</div>
-		</div>
-	</div>
-	<div class="row-fluid">
-		<div class="span4">
-			<h2>
-				Heading
-			</h2>
-			<p>
-				Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.
-			</p>
-			<p>
-				<a class="btn" href="#">View details »</a>
-			</p>
-		</div>
-		<div class="span4">
-			<h2>
-				Heading
-			</h2>
-			<p>
-				Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.
-			</p>
-			<p>
-				<a class="btn" href="#">View details »</a>
-			</p>
-		</div>
-		<div class="span4">
-			<h2>
-				Heading
-			</h2>
-			<p>
-				Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.
-			</p>
-			<p>
-				<a class="btn" href="#">View details »</a>
-			</p>
-		</div>
-	</div>
+<div id="window">
+    <div id="toolbar">
+        <div class="top">
+            <div id="lights">
+                <div class="light red">
+                    <div class="glyph">×</div>
+                    <div class="shine"></div>
+                    <div class="glow"></div>
+                </div>              
+                <div class="light yellow">
+                    <div class="glyph">-</div>
+                    <div class="shine"></div>
+                    <div class="glow"></div>
+                </div>
+                <div class="light green">
+                    <div class="glyph">+</div>
+                    <div class="shine"></div>
+                    <div class="glow"></div>
+                </div>
+            </div>
+            <div id="title">
+                <div class="folder">
+                    <div class="tab"></div>
+                    <div class="body"></div>
+                </div>
+            </div>
+            <div id="bubble">
+                <div class="shine"></div>
+                <div class="glow"></div>
+            </div>
+        </div>
+    </div>
+    <div id="body">
+       <span class="element"></span>
+        <div class="cursor"></div>  
+    </div>  
 </div>
-
-
-    <!-- Le javascript
-    ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
-    
-
-
-  </body>
+</body>
 </html>
