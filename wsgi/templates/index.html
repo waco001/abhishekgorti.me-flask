@@ -13,11 +13,6 @@
                 typeSpeed: 20,
                 showCursor: true,
                 callback: function(){
-                    $(".bonuscontent").typed({
-                        strings: [$('.bonuscontent-raw').html()],
-                        typeSpeed: 0.001,
-                        showCursor: true
-                    });
                 }
             });
         });
@@ -64,21 +59,6 @@
  </div>
  <div class="content-raw" style="display: none;">
     {{contentraw|safe}}
-</div>
-<div class="bonuscontent-raw" style="display: none;">
-{% if guitar == True %}
-    <pre>
-                   _..._      _.._
-                 .'     `'._.'    '.
-               /            __   .-'
-              |      :]___.'__'./______________._I_I_I.
-              |      :|========================I=_____(
-              |      :]"""'.__.;"""""""""""""""''I I I'
-}
-see ya later  \          __    |
-                '._   _.-'  `'._\
-    </pre>
-    {% endif %}
 </div>
 <script>
     $('.top').mouseover(function(e){
