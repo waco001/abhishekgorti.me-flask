@@ -7,9 +7,17 @@ app = Flask(__name__)
 
 #Create our index or root / route
 @app.route("/")
-@app.route("/index")
 def index():
-    return render_template('index.html')
+    content="Hello. <br>This is Abhishek Gorti's personal website. <br>There will definitely be more to come. <br>Please check back often. <br>More links will be in the menu(:hover) <br>-waco001 6/23/15 <br>If you need me, add me on skype:f18fan"
+    return render_template('index.html', contentraw=content, guitar=False)
+@app.route("/contact")
+def contact():
+	content="Call Me.<br>312.725.0351<br>Email Me<br>abhishek.gorti@gmail.com"
+	return render_template('index.html', contentraw=content)
+@app.route("/portfolio")
+def contact():
+	content="More Coming Soon"
+	return render_template('index.html', contentraw=content)
 
 if __name__ == "__main__":
     app.run(debug = "True",host='0.0.0.0',port=8000)

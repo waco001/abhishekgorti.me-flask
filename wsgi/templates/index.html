@@ -63,15 +63,10 @@
      </div>  
  </div>
  <div class="content-raw" style="display: none;">
-    Hello.
-    <br>This is Abhishek Gorti's personal website.
-    <br>There will definitely be more to come.
-    <br>Please check back often.
-    <br>More links will be in the menu(:hover)
-    <br>-waco001 6/23/15
-    <br>If you need me, add me on <a href="skype:f18fan?add">skype:f18fan</a>
+    {{contentraw|safe}}
 </div>
 <div class="bonuscontent-raw" style="display: none;">
+{% if guitar == True %}
     <pre>
                    _..._      _.._
                  .'     `'._.'    '.
@@ -79,9 +74,11 @@
               |      :]___.'__'./______________._I_I_I.
               |      :|========================I=_____(
               |      :]"""'.__.;"""""""""""""""''I I I'
+}
 see ya later  \          __    |
                 '._   _.-'  `'._\
     </pre>
+    {% endif %}
 </div>
 <script>
     $('.top').mouseover(function(e){
