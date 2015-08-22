@@ -15,7 +15,7 @@ def contact():
 	content="Call Me.<br>312.725.0351<br>Email Me<br>abhishek.gorti@gmail.com"
 	return render_template('index.html', contentraw=content)
 @app.route("/portfolio")
-def contact():
+def portfolio():
 	content="More Coming Soon"
 	return render_template('index.html', contentraw=content)
 
