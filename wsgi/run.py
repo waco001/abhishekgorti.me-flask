@@ -7,7 +7,9 @@ app = Flask(__name__)
 app.config['SERVER_NAME']="gorti.me"
 app.register_blueprint(abhishekgorti)
 #Create our index or root / route
+
+@app.route("/",subdomain='www')
 @app.route("/")
 def index():
-    content="Hello, you must be looking for Abhishek's Website: <a href='abhishek.gorti.me'>abhishek.gorti.me</a>"
+    content="Hello, you must be looking for Abhishek's Website: <a href='http://abhishek.gorti.me'>abhishek.gorti.me</a>"
     return content
