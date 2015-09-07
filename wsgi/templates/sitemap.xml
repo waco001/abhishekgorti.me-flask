@@ -4,7 +4,7 @@
     <url>
         <loc>{{url|safe}}</loc>
         <lastmod>{{lm|safe}}</lastmod>
-        <changeFreq>weekly</changeFreq>
+        <changefreq>weekly</changefreq>
     </url>
     {% endfor %}
 </urlset>
