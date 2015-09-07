@@ -22,7 +22,12 @@ def sitemap():
     for rule in app.url_map.iter_rules():
         if not rule.rule in pages:
             if "GET" in rule.methods and len(rule.arguments) == 0:
-                pages.append("http://" + rule.subdomain + "." + app.config['SERVER_NAME'] + rule.rule)
+                subdomain=''
+                if rule.subdomain is '':
+                    subdomain=''
+                else:
+                    subdomain = rule.subdomain + "."
+                pages.append("http://" + subdomain + app.config['SERVER_NAME'] + rule.rule)
     sitemap_xml = render_template('sitemap.xml', pages=pages,lm = PAGE_LAST_MODIFIED)
     response = make_response(sitemap_xml)
     response.headers["Content-Type"] = "application/xml"
