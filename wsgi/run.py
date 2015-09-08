@@ -1,6 +1,6 @@
 import os
 from flask import Flask
-from flask import render_template, make_response
+from flask import render_template, make_response, redirect, url_for
 from flask import request
 from abhishekgorti import abhishekgorti
 app = Flask(__name__)
@@ -12,7 +12,7 @@ app.config['SERVER_NAME']="gorti.me"
 @app.route("/",subdomain='www')
 @app.route("/")
 def index():
-    content="Hello, you must be looking for Abhishek's Website: <a href='http://abhishek.gorti.me'>abhishek.gorti.me</a>"
+    redirect(url_for("abhishekgorti.index"))
     return content
 @app.route('/sitemap.xml',methods=['GET'])
 def sitemap():
