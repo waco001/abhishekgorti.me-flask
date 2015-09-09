@@ -1,18 +1,19 @@
 import os
 from flask import Flask
-from flask import render_template, make_response, redirect, url_for
+from flask import render_template, make_response
 from flask import request
 from abhishekgorti import abhishekgorti
 app = Flask(__name__)
 app.register_blueprint(abhishekgorti)
 PAGE_LAST_MODIFIED = '2015-09-06'
-#app.config['SERVER_NAME']="gorti.me"
+app.config['SERVER_NAME']="gorti.me"
 #Create our index or root / route
 
 @app.route("/",subdomain='www')
 @app.route("/")
 def index():
-    return redirect('http://abhishek.gorti.me/')
+    content="Hello, you must be looking for Abhishek's Website: <a href='http://abhishek.gorti.me'>abhishek.gorti.me</a>"
+    return content
 @app.route('/sitemap.xml',methods=['GET'])
 def sitemap():
     """Generate sitemap.xml """
