@@ -12,7 +12,7 @@ PAGE_LAST_MODIFIED = '2015-09-06'
 @app.route("/",subdomain='www')
 @app.route("/")
 def index():
-    return redirect(url_for("abhishekgorti.index"))
+    return redirect('http://abhishek.gorti.me/')
 @app.route('/sitemap.xml',methods=['GET'])
 def sitemap():
     """Generate sitemap.xml """
