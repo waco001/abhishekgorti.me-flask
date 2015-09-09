@@ -6,14 +6,13 @@ from abhishekgorti import abhishekgorti
 app = Flask(__name__)
 app.register_blueprint(abhishekgorti)
 PAGE_LAST_MODIFIED = '2015-09-06'
-app.config['SERVER_NAME']="gorti.me"
+#app.config['SERVER_NAME']="gorti.me"
 #Create our index or root / route
 
 @app.route("/",subdomain='www')
 @app.route("/")
 def index():
-    redirect(url_for("abhishekgorti.index"))
-    return content
+    return redirect(url_for("abhishekgorti.index"))
 @app.route('/sitemap.xml',methods=['GET'])
 def sitemap():
     """Generate sitemap.xml """
